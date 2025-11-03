@@ -63,6 +63,26 @@
             height: 100%;
         }
 
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .header-image {
+            height: 60px;
+            width: auto;
+            border-radius: 8px;
+            border: 3px solid var(--primary);
+            box-shadow: 0 0 15px rgba(58, 134, 255, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .header-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(58, 134, 255, 0.8);
+        }
+
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
@@ -244,6 +264,24 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .top-link {
+            color: var(--lighter-accent);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            margin-top: 1rem;
+        }
+
+        .top-link:hover {
+            color: var(--primary);
+        }
+
         @media (max-width: 900px) {
             .content {
                 grid-template-columns: 1fr;
@@ -266,13 +304,24 @@
             .hero h1 {
                 font-size: 1.8rem;
             }
+            
+            .header-image {
+                height: 45px;
+            }
+            
+            .logo {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container header-content">
-            <a href="https://oeybers-cpu.github.io/a_lit_models/" class="logo">Academic Literacy <span>Blog</span></a>
+            <div class="logo-container">
+                <img src="https://github.com/oeybers-cpu/origins_AL/blob/main/1762210172.png?raw=true" alt="Academic Literacy" class="header-image">
+                <a href="https://oeybers-cpu.github.io/a_lit_models/" class="logo">Academic Literacy <span>Hub</span></a>
+            </div>
             <nav>
                 <ul>
                     <li><a href="https://oeybers-cpu.github.io/a_lit_models/">Home</a></li>
@@ -288,7 +337,7 @@
             <div class="meta-info">
                 <div class="meta-item">
                     <span>📅</span>
-                    <span>15 May 2023</span>
+                    <span>15 May 2025</span>
                 </div>
                 <div class="meta-item">
                     <span>⏱️</span>
@@ -363,10 +412,21 @@
     </div>
 
     <footer>
-        <div class="container">
-            <p>© 2023 Academic Literacy Blog | Exploring Educational Concepts and Theories</p>
+        <div class="container footer-content">
+            <p>© 2025 Academic Literacy Hub | Exploring Educational Concepts and Theories</p>
+            <a href="#" class="top-link">↑ Back to Top</a>
         </div>
     </footer>
+
+    <script>
+        // Smooth scroll to top functionality
+        document.querySelector('.top-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>
-The blog maintains a professional, academic appearance while being visually engaging and easy to navigate.
